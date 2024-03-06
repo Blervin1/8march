@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #ff6a88 55%,
+    #ff99ac 100%
+  );
+  cursor: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  
+}
+
+.loader_heart {
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  width: 7em;
+  height: 5em;
+  position: relative;
+  animation: beat 1s infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  border-radius: 5em 5em 0 0;
+  animation: coldblue 1s infinite;
+}
+
+.loader::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.loader::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes coldblue {
+  0%,
+  100% {
+    background-color: rgb(255, 255, 255);
+  }
+
+  50% {
+    background-color: rgb(255, 0, 0);
+  }
+}
+
+span {
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes moveShape {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  background: url(./img/heart.png) no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
