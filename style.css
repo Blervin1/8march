@@ -295,6 +295,55 @@ body {
 }
 
 .text:hover:before {
-  content: 'ТЕКСТ';
-  font-size: 25px;
+  content: 'текст';
+  font-size: 20px;
+}
+
+.cat-1 {
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  height: 250px;
+  width: 250px;
+}
+
+.cat-2 {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  height: 150px;
+  width: 150px;
+}
+
+.cat-3 {
+  position: absolute;
+  top: 525px;
+  right: 175px;
+  height: 350px;
+  width: 350px;
+}
+
+.cat-4 {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  left: 300px;
+  bottom: -150px;
+}
+
+.cat-5 {
+  position: absolute;
+  left: 100px;
+  top: 402px;
+  height: 150px;
+  width: 150px;
+}
+
+.Anna {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  border-radius: 22px;
+  left: 66px;
+  bottom: -130px;
 }
